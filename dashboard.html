@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Stackly</title>
+<meta name="description" content="Your Stackly account dashboard — saved homes, enquiries, site visits, search alerts and profile.">
+<meta name="theme-color" content="#0a192f">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L43 18v24a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V18L24 4z' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3Cpath d='M17 44V28h14v16' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav is-scrolled" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Stackly — go to homepage">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span class="brand__full">Stack<b>ly</b></span>
+    </a>
+
+    <nav class="nav__menu" aria-label="Primary navigation">
+      <ul class="nav__links">
+        <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Properties
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="properties.html"><span class="dot"></span>All Properties</a></li>
+            <li><a href="properties.html?purpose=sale"><span class="dot"></span>Buy a Home</a></li>
+            <li><a href="properties.html?purpose=rent"><span class="dot"></span>Rent a Home</a></li>
+            <li><a href="properties.html?type=Commercial"><span class="dot"></span>Commercial Spaces</a></li>
+            <li><a href="properties.html?sort=new"><span class="dot"></span>New Launches</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Company
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="about.html"><span class="dot"></span>About Us</a></li>
+            <li><a href="index.html#story"><span class="dot"></span>Our Story</a></li>
+            <li><a href="index.html#services"><span class="dot"></span>Why Stackly</a></li>
+            <li><a href="index.html#agents"><span class="dot"></span>Our Advisors</a></li>
+            <li><a href="index.html#testimonials"><span class="dot"></span>Testimonials</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="contact.html#contact-form">List Your Property</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE OVERLAY ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__scroll">
+    <div class="m-item"><a href="index.html">Home</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Properties <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="properties.html">All Properties</a>
+        <a href="properties.html?purpose=sale">Buy a Home</a>
+        <a href="properties.html?purpose=rent">Rent a Home</a>
+        <a href="properties.html?type=Commercial">Commercial Spaces</a>
+        <a href="properties.html?sort=new">New Launches</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="about.html">About</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="about.html">About Us</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#services">Why Stackly</a>
+        <a href="index.html#agents">Our Advisors</a>
+        <a href="index.html#testimonials">Testimonials</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="contact.html">Contact</a></div>
+
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary btn--block" href="contact.html#contact-form">List Your Property</a>
+      <p class="m-contact">Talk to us: <a href="tel:+914440001234">+91 44 4000 1234</a><br><a href="mailto:hello@stackly.com">hello@stackly.com</a></p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.8v3h2.5v7h3.2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.2v.1M11.6 17v-3.7a2.4 2.4 0 0 1 4.8 0V17"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ USER DASHBOARD ============ -->
+<main class="dash" id="dash">
+  <div class="dash__scrim" id="dashScrim"></div>
+
+  <!-- Sidebar -->
+  <aside class="dash__side" aria-label="Dashboard navigation">
+    <div class="dash__who">
+      <span class="userchip__ava" id="whoAva">--</span>
+      <div>
+        <b id="whoName">…</b>
+        <span id="whoEmail">…</span>
+      </div>
+      <span class="roletag" id="whoRole">user</span>
+    </div>
+
+    <nav class="dash__links">
+      <button class="is-active" type="button" data-panel="overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="9" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5.5" rx="1.5"/><rect x="13.5" y="12" width="7.5" height="9" rx="1.5"/><rect x="3" y="15.5" width="7.5" height="5.5" rx="1.5"/></svg>
+        Overview
+      </button>
+      <button type="button" data-panel="saved">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Saved Homes <span class="badge-dot" id="dotSaved">0</span>
+      </button>
+      <button type="button" data-panel="enquiries">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        My Enquiries <span class="badge-dot" id="dotEnq">0</span>
+      </button>
+      <button type="button" data-panel="visits">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Site Visits
+      </button>
+      <button type="button" data-panel="alerts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        Search Alerts
+      </button>
+      <button type="button" data-panel="profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+        My Profile
+      </button>
+    </nav>
+
+    <div class="dash__side-foot">
+      <a class="btn btn--ghost btn--sm btn--block" href="properties.html">Browse Properties</a>
+      <button class="btn btn--sm btn--block" type="button" data-logout style="margin-top:9px">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="dash__main">
+    <button class="dash__burger" id="dashBurger" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      Dashboard menu
+    </button>
+
+    <div class="dash__head">
+      <div>
+        <h1 id="dashTitle">Welcome back</h1>
+        <p id="dashSub">Here's what's happening with your property search.</p>
+      </div>
+      <div class="dash__actions">
+        <a class="btn btn--primary btn--sm" href="properties.html">Find a Home</a>
+        <a class="btn btn--ghost btn--sm" href="contact.html#contact-form">Talk to Advisor</a>
+      </div>
+    </div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="dash-panel" data-panel="overview">
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi__top">
+            <span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+            <span class="kpi__trend kpi__trend--up" id="kSavedTrend">+0</span>
+          </div>
+          <div class="kpi__val" id="kSaved">0</div>
+          <div class="kpi__label">Saved Homes</div>
+          <div class="kpi__note">Favourites on your shortlist</div>
+        </div>
+
+        <div class="kpi kpi--blue">
+          <div class="kpi__top">
+            <span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span class="kpi__trend kpi__trend--up" id="kEnqTrend">+0</span>
+          </div>
+          <div class="kpi__val" id="kEnq">0</div>
+          <div class="kpi__label">Enquiries Sent</div>
+          <div class="kpi__note">Awaiting advisor responses</div>
+        </div>
+
+        <div class="kpi kpi--gold">
+          <div class="kpi__top">
+            <span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+          </div>
+          <div class="kpi__val" id="kVisits">0</div>
+          <div class="kpi__label">Site Visits</div>
+          <div class="kpi__note">Scheduled &amp; completed</div>
+        </div>
+
+        <div class="kpi kpi--danger">
+          <div class="kpi__top">
+            <span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+          </div>
+          <div class="kpi__val" id="kAlerts">0</div>
+          <div class="kpi__label">Active Alerts</div>
+          <div class="kpi__note">Push notifications enabled</div>
+        </div>
+      </div>
+
+      <div class="dash-cols">
+        <!-- Recent activity -->
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg> Recent activity</h2>
+            <button class="btn btn--sm btn--soft" type="button" data-panel-link="enquiries">View all</button>
+          </div>
+          <div class="feed" id="activityFeed"></div>
+        </div>
+
+        <!-- Right column: advisor + account -->
+        <div>
+          <div class="panel">
+            <div class="panel__head"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7"/></svg> Your advisor</h2></div>
+            <div style="display:flex;gap:14px;align-items:center">
+              <img src="assets/img/agent-1.webp" alt="Arjun Mehta" style="width:64px;height:64px;border-radius:14px;object-fit:cover;border:1px solid var(--line)" loading="lazy">
+              <div>
+                <b style="color:var(--white)">Arjun Mehta</b>
+                <p style="font-size:.8rem">Senior Property Advisor · ★ 4.9</p>
+                <div style="display:flex;gap:8px;margin-top:8px">
+                  <a class="btn btn--sm btn--ghost" href="tel:+919843022114">Call</a>
+                  <a class="btn btn--sm btn--blue" href="mailto:arjun@stackly.com">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg> Account status</h2></div>
+            <div class="meter__row">
+              <div><span>Profile completeness</span><span id="profilePct">0%</span></div>
+              <div class="meter__track"><span class="meter__fill" id="profileMeter"></span></div>
+            </div>
+            <div class="switch-row" style="margin-top:14px">
+              <div><b>Email verified</b><p id="memberLine">Member since —</p></div>
+              <span class="pill pill--ok">verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommended -->
+      <div class="panel">
+        <div class="panel__head">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg> Recommended for you</h2>
+          <p class="sub">Based on your saved homes</p>
+        </div>
+        <div class="grid grid--3" id="recGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== SAVED ===== -->
+    <section class="dash-panel" data-panel="saved" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Saved homes</h2>
+          <p class="sub" id="savedCount">0 homes on your shortlist</p>
+        </div>
+        <div class="grid grid--3" id="savedGrid"></div>
+        <div class="empty" id="savedEmpty" hidden>
+          <div class="empty__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3>No saved homes yet</h3>
+          <p>Tap the ♥ on any listing to build your shortlist — it syncs to this dashboard instantly.</p>
+          <a class="btn btn--primary" href="properties.html">Explore Properties</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ENQUIRIES ===== -->
+    <section class="dash-panel" data-panel="enquiries" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> My enquiries</h2>
+          <p class="sub">Every message &amp; site-visit request you've sent</p>
+        </div>
+        <div class="tbl-wrap" id="enqWrap">
+          <table class="tbl">
+            <thead>
+              <tr><th>Property</th><th>Type</th><th>Sent</th><th>Status</th><th>Message</th></tr>
+            </thead>
+            <tbody id="enqRows"></tbody>
+          </table>
+        </div>
+        <div class="empty" id="enqEmpty" hidden>
+          <div class="empty__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <h3>No enquiries yet</h3>
+          <p>Send a message on any property page and it will appear here with live status updates.</p>
+          <a class="btn btn--primary" href="properties.html">Find a Property</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SITE VISITS ===== -->
+    <section class="dash-panel" data-panel="visits" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Site visits</h2>
+          <a class="btn btn--sm btn--soft" href="contact.html#contact-form">Book a new visit</a>
+        </div>
+        <div id="visitList"></div>
+        <div class="empty" id="visitEmpty" hidden>
+          <div class="empty__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </div>
+          <h3>No site visits booked</h3>
+          <p>Request a viewing from any property page or contact an advisor directly.</p>
+          <a class="btn btn--primary" href="contact.html#contact-form">Book a Visit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ALERTS ===== -->
+    <section class="dash-panel" data-panel="alerts" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg> Search alerts</h2>
+          <p class="sub">Choose what Stackly should notify you about</p>
+        </div>
+
+        <div class="switch-row">
+          <div><b>New listings in my cities</b><p>Email me the moment a verified home is added in my saved areas.</p></div>
+          <label class="switch"><input type="checkbox" data-alert="newListings"><i></i></label>
+        </div>
+        <div class="switch-row">
+          <div><b>Price drops on saved homes</b><p>Instant alert when a shortlisted property gets a price revision.</p></div>
+          <label class="switch"><input type="checkbox" data-alert="priceDrops"><i></i></label>
+        </div>
+        <div class="switch-row">
+          <div><b>Weekly digest</b><p>A Sunday summary of matching homes, market notes and open houses.</p></div>
+          <label class="switch"><input type="checkbox" data-alert="digest"><i></i></label>
+        </div>
+        <div class="switch-row">
+          <div><b>WhatsApp notifications</b><p>Same alerts on WhatsApp for faster advisor conversations.</p></div>
+          <label class="switch"><input type="checkbox" data-alert="whatsapp"><i></i></label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18"/><path d="M6 12h12"/><path d="M10 19h4"/></svg> Saved search</h2>
+        </div>
+        <form id="searchAlertForm" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;align-items:end">
+          <div class="field">
+            <label for="saCity">City</label>
+            <select id="saCity" name="city"><option value="">Any city</option></select>
+          </div>
+          <div class="field">
+            <label for="saBudget">Max budget</label>
+            <select id="saBudget" name="budget">
+              <option value="">No limit</option>
+              <option value="5000000">₹50 Lakh</option>
+              <option value="10000000">₹1 Crore</option>
+              <option value="20000000">₹2 Crore</option>
+              <option value="50000000">₹5 Crore</option>
+              <option value="100000000">₹10 Crore</option>
+            </select>
+          </div>
+          <button class="btn btn--primary" type="submit">Save search alert</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== PROFILE ===== -->
+    <section class="dash-panel" data-panel="profile" hidden>
+      <div class="dash-cols">
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg> Profile details</h2>
+          </div>
+          <form id="profileForm" class="auth-form" style="gap:16px">
+            <div class="field">
+              <label for="pfName">Full name</label>
+              <input type="text" id="pfName" name="name" required>
+              <span class="field__err">Name must be at least 2 characters.</span>
+            </div>
+            <div class="field">
+              <label for="pfEmail">Email (login)</label>
+              <input type="email" id="pfEmail" disabled style="opacity:.65;cursor:not-allowed">
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+              <div class="field">
+                <label for="pfPhone">Mobile</label>
+                <input type="tel" id="pfPhone" name="phone">
+                <span class="field__err">Enter a valid 10-digit mobile number.</span>
+              </div>
+              <div class="field">
+                <label for="pfCity">Current city</label>
+                <select id="pfCity" name="city"><option value="">Select city</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="pfBudget">Buying budget</label>
+              <select id="pfBudget" name="budget">
+                <option value="">Not decided yet</option>
+                <option value="Under ₹50 Lakh">Under ₹50 Lakh</option>
+                <option value="₹50 L – ₹1 Cr">₹50 L – ₹1 Cr</option>
+                <option value="₹1 Cr – ₹2 Cr">₹1 Cr – ₹2 Cr</option>
+                <option value="₹2 Cr – ₹5 Cr">₹2 Cr – ₹5 Cr</option>
+                <option value="₹5 Cr+">₹5 Cr+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="pfBio">About you</label>
+              <textarea id="pfBio" name="bio" rows="3" placeholder="Tell your advisor what you're looking for…"></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit" style="justify-self:start">Save changes</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="panel__head"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg> Security</h2></div>
+            <div class="switch-row">
+              <div><b>Password</b><p>Last changed at registration · demo mode</p></div>
+              <button class="btn btn--sm btn--ghost" type="button" id="changePw">Change</button>
+            </div>
+            <div class="switch-row">
+              <div><b>Session</b><p>Signed in on this browser only</p></div>
+              <button class="btn btn--sm btn--ghost" type="button" data-logout>Sign out</button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg> Membership</h2></div>
+            <div class="switch-row">
+              <div><b>Plan</b><p>Free forever · no listing fees</p></div>
+              <span class="pill pill--ok">active</span>
+            </div>
+            <div class="switch-row">
+              <div><b>Member since</b><p id="pfJoined">—</p></div>
+              <span class="pill pill--info" id="pfRolePill">user</span>
+            </div>
+            <div class="switch-row">
+              <div><b>Admin console</b><p>Available for administrator accounts</p></div>
+              <a class="btn btn--sm btn--blue" href="admin.html">Open</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ============ APP FOOTER ============ -->
+<footer class="appfoot">
+  <div class="container">
+    <p>© <span data-year>2026</span> Stackly Realty · User Dashboard · RERA TN/29/0000/2011</p>
+    <nav aria-label="Footer">
+      <a href="index.html">Main Site</a> ·
+      <a href="about.html">About</a> ·
+      <a href="contact.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

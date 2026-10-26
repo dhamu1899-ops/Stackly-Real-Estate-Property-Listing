@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly — Premium Property Listings | Buy, Rent & Sell Homes</title>
+<meta name="description" content="Stackly is a premium, fully verified real estate marketplace — explore luxury villas, apartments, penthouses and commercial spaces across India with expert advisors, transparent pricing and legal assistance.">
+<meta name="theme-color" content="#0a192f">
+<meta property="og:title" content="Stackly — Premium Property Listings">
+<meta property="og:description" content="Handpicked, legally verified homes across India's fastest-growing cities.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L43 18v24a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V18L24 4z' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3Cpath d='M17 44V28h14v16' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ LOADER (PRD §Loader: brand logo + single CSS ring, 2–5s) ============ -->
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader__inner">
+    <div class="loader__logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span>Stack<span style="color:#64ffda">ly</span></span>
+    </div>
+    <div class="loader__ring" aria-hidden="true"></div>
+    <p class="loader__text">Loading, please wait…</p>
+    <p class="loader__sub">Curating verified properties for you</p>
+  </div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- ============ NAVBAR (PRD §Navbar: full width · fixed · dropdown cues · logo → home) ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Stackly — go to homepage">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span class="brand__full">Stack<b>ly</b></span>
+    </a>
+
+    <nav class="nav__menu" aria-label="Primary navigation">
+      <ul class="nav__links">
+        <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Properties
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="properties.html"><span class="dot"></span>All Properties</a></li>
+            <li><a href="properties.html?purpose=sale"><span class="dot"></span>Buy a Home</a></li>
+            <li><a href="properties.html?purpose=rent"><span class="dot"></span>Rent a Home</a></li>
+            <li><a href="properties.html?type=Commercial"><span class="dot"></span>Commercial Spaces</a></li>
+            <li><a href="properties.html?sort=new"><span class="dot"></span>New Launches</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Company
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="about.html"><span class="dot"></span>About Us</a></li>
+            <li><a href="index.html#story"><span class="dot"></span>Our Story</a></li>
+            <li><a href="index.html#services"><span class="dot"></span>Why Stackly</a></li>
+            <li><a href="index.html#agents"><span class="dot"></span>Our Advisors</a></li>
+            <li><a href="index.html#testimonials"><span class="dot"></span>Testimonials</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="contact.html#contact-form">List Your Property</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE FULL-SCREEN OVERLAY (PRD: page locked · menu scrolls) ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__scroll">
+    <div class="m-item"><a href="index.html">Home</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Properties <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="properties.html">All Properties</a>
+        <a href="properties.html?purpose=sale">Buy a Home</a>
+        <a href="properties.html?purpose=rent">Rent a Home</a>
+        <a href="properties.html?type=Commercial">Commercial Spaces</a>
+        <a href="properties.html?sort=new">New Launches</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="about.html">About</a></div>
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="about.html">About Us</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#services">Why Stackly</a>
+        <a href="index.html#agents">Our Advisors</a>
+        <a href="index.html#testimonials">Testimonials</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="contact.html">Contact</a></div>
+
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary btn--block" href="contact.html#contact-form">List Your Property</a>
+      <p class="m-contact">Talk to us: <a href="tel:+914440001234">+91 44 4000 1234</a><br><a href="mailto:hello@stackly.com">hello@stackly.com</a></p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.8v3h2.5v7h3.2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.2v.1M11.6 17v-3.7a2.4 2.4 0 0 1 4.8 0V17"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero__bg" style="background-image:url('assets/img/hero-home.webp')" role="img" aria-label="Luxury villa at dusk"></div>
+  <div class="hero__shade" aria-hidden="true"></div>
+
+  <div class="container hero__content">
+    <p class="eyebrow" data-reveal="fade">Verified · Luxury · Trusted</p>
+    <h1 class="hero__title" data-reveal style="--d:.08s">Find a place
+      <span class="serif grad-text">you'll love</span> to call home
+    </h1>
+    <p class="hero__sub" data-reveal style="--d:.16s">
+      From sea-facing penthouses to smart city apartments — handpicked, legally verified
+      properties across India's fastest-growing cities, guided by advisors who actually pick up the phone.
+    </p>
+
+    <form class="searchbar" id="heroSearch" data-reveal style="--d:.24s" role="search" aria-label="Property search">
+      <div class="searchbar__field">
+        <label for="sCity">Location</label>
+        <select id="sCity" name="city">
+          <option value="all">Any City</option>
+          <option>Chennai</option><option>Bengaluru</option><option>Coimbatore</option>
+          <option>Hyderabad</option><option>Pune</option><option>Mumbai</option>
+          <option>Goa</option><option>Salem</option><option>Coorg</option>
+        </select>
+      </div>
+      <div class="searchbar__field">
+        <label for="sType">Property Type</label>
+        <select id="sType" name="type">
+          <option value="all">Any Type</option>
+          <option>Apartment</option><option>Villa</option><option>Penthouse</option>
+          <option>Townhouse</option><option>House</option><option>Plot</option><option>Commercial</option>
+        </select>
+      </div>
+      <div class="searchbar__field">
+        <label for="sPurpose">I want to</label>
+        <select id="sPurpose" name="purpose">
+          <option value="all">Buy or Rent</option>
+          <option value="sale">Buy</option>
+          <option value="rent">Rent</option>
+        </select>
+      </div>
+      <div class="searchbar__field">
+        <label for="sBudget">Budget</label>
+        <select id="sBudget" name="budget">
+          <option value="all">Any Budget</option>
+          <option value="0-8000000">Under ₹80 L</option>
+          <option value="8000000-20000000">₹80 L – ₹2 Cr</option>
+          <option value="20000000-50000000">₹2 Cr – ₹5 Cr</option>
+          <option value="50000000-9999999999">₹5 Cr &amp; above</option>
+        </select>
+      </div>
+      <button class="btn btn--primary searchbar__btn" type="submit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        Search
+      </button>
+    </form>
+
+    <div class="hero__chips" data-reveal style="--d:.34s">
+      <span>Popular:</span>
+      <button class="chip" type="button" data-chip="type:Villa">Villas</button>
+      <button class="chip" type="button" data-chip="type:Apartment">Apartments</button>
+      <button class="chip" type="button" data-chip="type:Penthouse">Penthouses</button>
+      <button class="chip" type="button" data-chip="purpose:rent">Rentals</button>
+      <button class="chip" type="button" data-chip="type:Commercial">Commercial</button>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">Scroll<i></i></div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats container" aria-label="Stackly in numbers">
+  <div class="stats__inner">
+    <div class="stat" data-reveal>
+      <div class="stat__num"><span data-count="2400" data-suffix="+">0</span></div>
+      <div class="stat__label">Verified Listings</div>
+      <div class="stat__note">Physically inspected this quarter</div>
+    </div>
+    <div class="stat" data-reveal>
+      <div class="stat__num"><span data-count="1850" data-suffix="+">0</span></div>
+      <div class="stat__label">Happy Families</div>
+      <div class="stat__note">Closed with zero hidden charges</div>
+    </div>
+    <div class="stat" data-reveal>
+      <div class="stat__num"><span data-count="26">0</span></div>
+      <div class="stat__label">Cities Covered</div>
+      <div class="stat__note">Metro &amp; emerging markets</div>
+    </div>
+    <div class="stat" data-reveal>
+      <div class="stat__num"><span data-count="15" data-suffix="+">0</span></div>
+      <div class="stat__label">Years of Trust</div>
+      <div class="stat__note">Since 2011, family owned</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROPERTIES ============ -->
+<section class="section" id="featured">
+  <div class="container">
+    <div class="section__head">
+      <div data-reveal>
+        <p class="eyebrow">Curated for you</p>
+        <h2 class="section__title">Featured <span class="serif">properties</span></h2>
+        <p class="section__sub">A handpicked selection of homes our advisors visited, verified and would happily live in themselves.</p>
+      </div>
+      <a class="btn btn--ghost" href="properties.html" data-reveal="right">View all listings
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="tabs" data-tabs role="tablist" aria-label="Filter featured properties" data-reveal="fade">
+      <button class="tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="tab" type="button" data-filter="sale" role="tab" aria-selected="false">For Sale</button>
+      <button class="tab" type="button" data-filter="rent" role="tab" aria-selected="false">For Rent</button>
+      <button class="tab" type="button" data-filter="new" role="tab" aria-selected="false">New Builds</button>
+    </div>
+
+    <div class="grid grid--3" id="featuredGrid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY / ABOUT ============ -->
+<section class="section section--alt" id="story">
+  <div class="container story">
+    <div class="story__media" data-reveal="left">
+      <span class="story__frame" aria-hidden="true"></span>
+      <img class="main" src="assets/img/story.webp" alt="Stackly advisory team meeting a family" loading="lazy" decoding="async">
+      <div class="float-card">
+        <b>15+</b>
+        <span>Years of<br>market experience</span>
+      </div>
+      <div class="float-card float-card--2">
+        <b>4.9</b>
+        <span>Average client<br>rating ★★★★★</span>
+      </div>
+    </div>
+
+    <div data-reveal="right">
+      <p class="eyebrow">Who we are</p>
+      <h2 class="section__title" style="max-width:24ch">A smarter, safer way to buy &amp; sell <span class="serif">property</span></h2>
+      <p class="mt-2">
+        Stackly began in 2011 with a simple frustration — property buying in India felt opaque.
+        We rebuilt the experience around three promises: every listing verified in person, every rupee
+        explained in writing, and one advisor with you from shortlist to registration.
+      </p>
+      <ul class="check-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+          <span><b style="color:#ccd6f6">Triple-checked titles</b> — legal, encumbrance and layout approval verified before a listing goes live.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+          <span><b style="color:#ccd6f6">Honest pricing</b> — real comparable sales data, so you never overpay at the negotiating table.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+          <span><b style="color:#ccd6f6">End-to-end paperwork</b> — loans, registration and tax guidance handled with empanelled partners.</span>
+        </li>
+      </ul>
+
+      <div class="cta-band__actions" style="margin-top:34px">
+        <a class="btn btn--primary" href="properties.html">Browse Properties</a>
+        <a class="btn btn--blue" href="contact.html">Talk to an Advisor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY / SERVICES ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head center" style="justify-content:center">
+      <div data-reveal>
+        <p class="eyebrow">Why Stackly</p>
+        <h2 class="section__title">Everything handled, <span class="serif">nothing hidden</span></h2>
+        <p class="section__sub">Six commitments that apply to every transaction — whether it's your first studio or your fifth investment floor.</p>
+      </div>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Verified Listings Only</h3>
+        <p>Every property is visited, photographed and document-checked by our own team before it appears here.</p>
+        <span class="svc-card__no">01</span>
+      </article>
+
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7"/><path d="M17.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg></div>
+        <h3>Dedicated Advisors</h3>
+        <p>One named advisor stays with you from first shortlist to key handover — no call-centre roulette.</p>
+        <span class="svc-card__no">02</span>
+      </article>
+
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Transparent Pricing</h3>
+        <p>Comparable sales, readiness scores and negotiation room shared openly before you make an offer.</p>
+        <span class="svc-card__no">03</span>
+      </article>
+
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></div>
+        <h3>Legal &amp; Loan Support</h3>
+        <p>Empanelled advocates handle due diligence while our bankers pre-qualify your home loan in 72 hours.</p>
+        <span class="svc-card__no">04</span>
+      </article>
+
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M19 16l.9 2.6 2.6.9-2.6.9L19 23l-.9-2.6-2.6-.9 2.6-.9L19 16z"/></svg></div>
+        <h3>4K Video Walkthroughs</h3>
+        <p>Tour homes from another city with room-by-room 4K video, floor plans and drone neighbourhood shots.</p>
+        <span class="svc-card__no">05</span>
+      </article>
+
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><path d="M11.5 11.5L21 21"/><path d="M17 17l2-2M14.5 14.5l2-2"/></svg></div>
+        <h3>After-Sale Care</h3>
+        <p>Interior referrals, rent-out support and resale valuation — we stay useful long after registration day.</p>
+        <span class="svc-card__no">06</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADVISORS ============ -->
+<section class="section section--alt" id="agents">
+  <div class="container">
+    <div class="section__head">
+      <div data-reveal>
+        <p class="eyebrow">People behind the keys</p>
+        <h2 class="section__title">Meet your <span class="serif">advisors</span></h2>
+        <p class="section__sub">Specialists by market and property type — matched to you automatically when you enquire.</p>
+      </div>
+      <a class="btn btn--ghost" href="contact.html" data-reveal="right">Work with us</a>
+    </div>
+    <div class="grid grid--4" id="agentGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section__head center" style="justify-content:center">
+      <div data-reveal>
+        <p class="eyebrow">Social proof</p>
+        <h2 class="section__title">What our <span class="serif">clients say</span></h2>
+      </div>
+    </div>
+
+    <div class="tst" data-reveal="fade">
+      <div class="tst__viewport">
+        <div class="tst__track">
+          <div class="tst__slide">
+            <figure class="tst-card">
+              <div class="tst-card__stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              </div>
+              <blockquote class="tst-card__text">Stackly made buying our first villa genuinely enjoyable. The shortlist was curated perfectly for our budget and the legal team handled every document without a single follow-up from us.</blockquote>
+              <figcaption class="tst-card__who">
+                <img src="assets/img/t-1.webp" alt="" loading="lazy">
+                <div><b>Rahul Verma</b><span>Homeowner, Bengaluru</span></div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="tst__slide">
+            <figure class="tst-card">
+              <div class="tst-card__stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              </div>
+              <blockquote class="tst-card__text">I have invested with three other firms, and none of them come close to this transparency. Rental yield projections were accurate, and my advisor called me with updates before I even asked.</blockquote>
+              <figcaption class="tst-card__who">
+                <img src="assets/img/t-2.webp" alt="" loading="lazy">
+                <div><b>Meera Krishnan</b><span>Investor, Chennai</span></div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="tst__slide">
+            <figure class="tst-card">
+              <div class="tst-card__stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              </div>
+              <blockquote class="tst-card__text">Buying property from overseas felt risky until the video tours and verified paperwork came in. Everything was documented, digitised and delivered on the promised date.</blockquote>
+              <figcaption class="tst-card__who">
+                <img src="assets/img/t-3.webp" alt="" loading="lazy">
+                <div><b>Samuel Joseph</b><span>NRI Buyer, Dubai</span></div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="tst__slide">
+            <figure class="tst-card">
+              <div class="tst-card__stars" aria-label="4.5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              </div>
+              <blockquote class="tst-card__text">Found a fully furnished apartment in four days. The deposit, agreement and handover were handled professionally with zero hidden charges. Highly recommended for renters.</blockquote>
+              <figcaption class="tst-card__who">
+                <img src="assets/img/t-4.webp" alt="" loading="lazy">
+                <div><b>Divya Nair</b><span>Tenant, Coimbatore</span></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="tst__nav">
+        <button class="tst__btn tst__btn--prev" type="button" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="tst__dots"></div>
+        <button class="tst__btn tst__btn--next" type="button" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band" style="background-image:url('assets/img/cta-bg.webp')" data-reveal="zoom">
+      <div class="cta-band__content">
+        <p class="eyebrow">Ready when you are</p>
+        <h2 class="section__title" style="margin-top:16px">Your next address is <span class="serif">one call away</span></h2>
+        <p class="section__sub">Tell us your budget and neighbourhood — we'll send a curated shortlist within 24 hours, complete with floor plans and honest trade-offs.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="contact.html#contact-form">Get a Free Shortlist</a>
+          <a class="btn btn--ghost btn--lg" href="properties.html">Explore Listings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <a class="brand" href="index.html" aria-label="Stackly home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+        <span>Stack<b>ly</b></span>
+      </a>
+      <p class="footer__about">India's curated marketplace for verified luxury and lifestyle homes — honest advice, transparent pricing and paperwork handled end to end.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.8v3h2.5v7h3.2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.2v.1M11.6 17v-3.7a2.4 2.4 0 0 1 4.8 0V17"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#agents">Advisors</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="dashboard.html">My Dashboard</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Properties</h4>
+      <ul class="footer__links">
+        <li><a href="properties.html?purpose=sale">Buy a Home</a></li>
+        <li><a href="properties.html?purpose=rent">Rent a Home</a></li>
+        <li><a href="properties.html?type=Apartment">Apartments</a></li>
+        <li><a href="properties.html?type=Villa">Villas</a></li>
+        <li><a href="properties.html?type=Commercial">Commercial</a></li>
+        <li><a href="properties.html?type=Plot">Plots</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Get in touch</h4>
+      <ul class="footer__contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>12 Marina Boulevard, Fairlands,<br>Salem, Tamil Nadu 636016</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+          <a href="tel:+914440001234">+91 44 4000 1234</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:hello@stackly.com">hello@stackly.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+          <span>Mon – Sat · 9:30 AM – 7:00 PM</span>
+        </li>
+      </ul>
+      <form class="newsletter" novalidate>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address for newsletter" required>
+        <button class="btn btn--primary btn--sm" type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© <span data-year>2026</span> Stackly Realty. All rights reserved. RERA Reg. No. TN/29/0000/2011</p>
+      <nav aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
+</button>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

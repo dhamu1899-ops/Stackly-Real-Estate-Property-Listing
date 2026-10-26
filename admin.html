@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Console — Stackly</title>
+<meta name="description" content="Stackly administrator console — manage listings, moderate users, work the enquiry pipeline and site settings.">
+<meta name="theme-color" content="#0a192f">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L43 18v24a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V18L24 4z' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3Cpath d='M17 44V28h14v16' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav is-scrolled" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Stackly — go to homepage">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span class="brand__full">Stack<b>ly</b></span>
+    </a>
+
+    <nav class="nav__menu" aria-label="Primary navigation">
+      <ul class="nav__links">
+        <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Properties
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="properties.html"><span class="dot"></span>All Properties</a></li>
+            <li><a href="properties.html?purpose=sale"><span class="dot"></span>Buy a Home</a></li>
+            <li><a href="properties.html?purpose=rent"><span class="dot"></span>Rent a Home</a></li>
+            <li><a href="properties.html?type=Commercial"><span class="dot"></span>Commercial Spaces</a></li>
+            <li><a href="properties.html?sort=new"><span class="dot"></span>New Launches</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Company
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="about.html"><span class="dot"></span>About Us</a></li>
+            <li><a href="index.html#story"><span class="dot"></span>Our Story</a></li>
+            <li><a href="index.html#services"><span class="dot"></span>Why Stackly</a></li>
+            <li><a href="index.html#agents"><span class="dot"></span>Our Advisors</a></li>
+            <li><a href="index.html#testimonials"><span class="dot"></span>Testimonials</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="contact.html#contact-form">List Your Property</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE OVERLAY ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__scroll">
+    <div class="m-item"><a href="index.html">Home</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Properties <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="properties.html">All Properties</a>
+        <a href="properties.html?purpose=sale">Buy a Home</a>
+        <a href="properties.html?purpose=rent">Rent a Home</a>
+        <a href="properties.html?type=Commercial">Commercial Spaces</a>
+        <a href="properties.html?sort=new">New Launches</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="about.html">About</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="about.html">About Us</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#services">Why Stackly</a>
+        <a href="index.html#agents">Our Advisors</a>
+        <a href="index.html#testimonials">Testimonials</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="contact.html">Contact</a></div>
+
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary btn--block" href="contact.html#contact-form">List Your Property</a>
+      <p class="m-contact">Talk to us: <a href="tel:+914440001234">+91 44 4000 1234</a><br><a href="mailto:hello@stackly.com">hello@stackly.com</a></p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.8v3h2.5v7h3.2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.2v.1M11.6 17v-3.7a2.4 2.4 0 0 1 4.8 0V17"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ACCESS GATE (shown when not an admin) ============ -->
+<section class="container locked" id="adminGate" hidden>
+  <div class="locked__icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="M12 15v2"/></svg>
+  </div>
+  <h1 id="gateTitle">Admins only</h1>
+  <p id="gateText">The console behind this door manages listings, users and the enquiry pipeline. Sign in with an administrator account to continue.</p>
+  <div id="gateActions">
+    <a class="btn btn--primary" href="login.html?next=admin.html">Sign in as Admin</a>
+    <a class="btn btn--ghost" href="index.html">Back to Home</a>
+  </div>
+</section>
+
+<!-- ============ ADMIN CONSOLE ============ -->
+<main class="dash admin" id="dash">
+  <div class="dash__scrim" id="dashScrim"></div>
+
+  <!-- Sidebar -->
+  <aside class="dash__side" aria-label="Admin navigation">
+    <div class="dash__who">
+      <span class="userchip__ava" id="whoAva">--</span>
+      <div>
+        <b id="whoName">…</b>
+        <span id="whoEmail">…</span>
+      </div>
+      <span class="roletag roletag--admin" id="whoRole">admin</span>
+    </div>
+
+    <nav class="dash__links">
+      <button class="is-active" type="button" data-panel="overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="9" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5.5" rx="1.5"/><rect x="13.5" y="12" width="7.5" height="9" rx="1.5"/><rect x="3" y="15.5" width="7.5" height="5.5" rx="1.5"/></svg>
+        Overview
+      </button>
+      <button type="button" data-panel="properties">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
+        Properties <span class="badge-dot" id="dotProps">0</span>
+      </button>
+      <button type="button" data-panel="users">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7"/><path d="M17.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg>
+        Users <span class="badge-dot" id="dotUsers">0</span>
+      </button>
+      <button type="button" data-panel="enquiries">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        Enquiries <span class="badge-dot" id="dotEnq">0</span>
+      </button>
+      <button type="button" data-panel="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55h.09a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+        Settings
+      </button>
+    </nav>
+
+    <div class="dash__side-foot">
+      <a class="btn btn--ghost btn--sm btn--block" href="dashboard.html">User Dashboard</a>
+      <button class="btn btn--sm btn--block" type="button" data-logout style="margin-top:9px">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="dash__main">
+    <button class="dash__burger" id="dashBurger" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      Console menu
+    </button>
+
+    <div class="dash__head">
+      <div>
+        <h1 id="dashTitle">Admin console</h1>
+        <p id="dashSub">Marketplace health at a glance.</p>
+      </div>
+      <div class="dash__actions">
+        <a class="btn btn--primary btn--sm" href="index.html">View Site</a>
+        <a class="btn btn--ghost btn--sm" href="dashboard.html">My Dashboard</a>
+      </div>
+    </div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="dash-panel" data-panel="overview">
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi__top"><span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span></div>
+          <div class="kpi__val" id="aTotal">0</div>
+          <div class="kpi__label">Total Listings</div>
+          <div class="kpi__note">Entire catalogue</div>
+        </div>
+        <div class="kpi kpi--blue">
+          <div class="kpi__top">
+            <span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span>
+            <span class="kpi__trend kpi__trend--up" id="aLivePct">—</span>
+          </div>
+          <div class="kpi__val" id="aLive">0</div>
+          <div class="kpi__label">Live Now</div>
+          <div class="kpi__note">Visible to buyers</div>
+        </div>
+        <div class="kpi kpi--gold">
+          <div class="kpi__top"><span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span></div>
+          <div class="kpi__val" id="aPending">0</div>
+          <div class="kpi__label">Pending Review</div>
+          <div class="kpi__note">Awaiting approval</div>
+        </div>
+        <div class="kpi kpi--blue">
+          <div class="kpi__top"><span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7"/><path d="M17.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg></span></div>
+          <div class="kpi__val" id="aUsers">0</div>
+          <div class="kpi__label">Registered Users</div>
+          <div class="kpi__note" id="aBannedNote">—</div>
+        </div>
+        <div class="kpi kpi--danger">
+          <div class="kpi__top"><span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span></div>
+          <div class="kpi__val" id="aEnq">0</div>
+          <div class="kpi__label">New Enquiries</div>
+          <div class="kpi__note">Unanswered right now</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__top"><span class="kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span></div>
+          <div class="kpi__val" id="aGmv" style="font-size:1.4rem">—</div>
+          <div class="kpi__label">Listed GMV</div>
+          <div class="kpi__note">Sale inventory value</div>
+        </div>
+      </div>
+
+      <div class="dash-cols">
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg> Listings by city</h2>
+            <p class="sub">Live inventory distribution</p>
+          </div>
+          <div class="chart" id="cityChart"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18"/><path d="M6 12h12"/><path d="M10 19h4"/></svg> Enquiry pipeline</h2>
+            <p class="sub">Status of all messages</p>
+          </div>
+          <div class="meters" id="pipeline"></div>
+        </div>
+      </div>
+
+      <div class="dash-cols">
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Latest enquiries</h2>
+            <button class="btn btn--sm btn--soft" type="button" data-panel-link="enquiries">Open inbox</button>
+          </div>
+          <div class="feed" id="latestEnq"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7"/><path d="M17.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg> Recent signups</h2>
+            <button class="btn btn--sm btn--soft" type="button" data-panel-link="users">Manage</button>
+          </div>
+          <div class="feed" id="latestUsers"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROPERTIES ===== -->
+    <section class="dash-panel" data-panel="properties" hidden>
+      <div class="panel panel--flush">
+        <div class="panel__head" style="padding:20px 22px;margin:0;border-bottom:1px solid var(--line)">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> Property moderation</h2>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <p class="sub" id="propCount">—</p>
+            <div class="field" style="position:relative">
+              <input type="search" id="propSearch" placeholder="Search title, city, type…" aria-label="Search properties" style="min-height:40px;padding:8px 14px;min-width:230px;font-size:.86rem">
+            </div>
+          </div>
+        </div>
+        <div class="tbl-wrap" style="border:0;border-radius:0">
+          <table class="tbl">
+            <thead>
+              <tr><th>Property</th><th>City / Type</th><th>Price</th><th>Status</th><th>Featured</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="propRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== USERS ===== -->
+    <section class="dash-panel" data-panel="users" hidden>
+      <div class="panel panel--flush">
+        <div class="panel__head" style="padding:20px 22px;margin:0;border-bottom:1px solid var(--line)">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7"/><path d="M17.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg> User management</h2>
+          <p class="sub" id="userCount">—</p>
+        </div>
+        <div class="tbl-wrap" style="border:0;border-radius:0">
+          <table class="tbl">
+            <thead>
+              <tr><th>User</th><th>Role</th><th>Status</th><th>Joined</th><th>Saved / Enquiries</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="userRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ENQUIRIES ===== -->
+    <section class="dash-panel" data-panel="enquiries" hidden>
+      <div class="panel panel--flush">
+        <div class="panel__head" style="padding:20px 22px;margin:0;border-bottom:1px solid var(--line)">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Enquiry inbox</h2>
+          <div class="tabs" data-tabs id="enqTabs" role="tablist" style="margin:0;padding:4px">
+            <button class="tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="tab" type="button" data-filter="new" role="tab" aria-selected="false">New</button>
+            <button class="tab" type="button" data-filter="contacted" role="tab" aria-selected="false">Contacted</button>
+            <button class="tab" type="button" data-filter="scheduled" role="tab" aria-selected="false">Scheduled</button>
+            <button class="tab" type="button" data-filter="closed" role="tab" aria-selected="false">Closed</button>
+          </div>
+        </div>
+        <div class="tbl-wrap" style="border:0;border-radius:0">
+          <table class="tbl">
+            <thead>
+              <tr><th>From</th><th>Property</th><th>Type</th><th>Sent</th><th>Status</th><th>Message</th></tr>
+            </thead>
+            <tbody id="enqRows"></tbody>
+          </table>
+        </div>
+        <div class="empty" id="enqEmpty" hidden>
+          <div class="empty__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <h3>Inbox zero</h3>
+          <p>No enquiries match this filter — enjoy the calm.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SETTINGS ===== -->
+    <section class="dash-panel" data-panel="settings" hidden>
+      <div class="dash-cols">
+        <div class="panel">
+          <div class="panel__head">
+            <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55h.09a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg> Site switches</h2>
+            <p class="sub">Applies immediately in this browser</p>
+          </div>
+
+          <div class="switch-row">
+            <div><b>Maintenance mode</b><p>Show a maintenance notice across the public site (demo flag).</p></div>
+            <label class="switch"><input type="checkbox" data-setting="maintenance"><i></i></label>
+          </div>
+          <div class="switch-row">
+            <div><b>Allow new registrations</b><p>Turn off to pause sign-ups on the create-account page.</p></div>
+            <label class="switch"><input type="checkbox" data-setting="registration" checked><i></i></label>
+          </div>
+          <div class="switch-row">
+            <div><b>Auto-approve listings</b><p>New submissions go live without manual review.</p></div>
+            <label class="switch"><input type="checkbox" data-setting="autoApprove"><i></i></label>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="panel__head"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg> Demo data</h2></div>
+            <div class="switch-row">
+              <div><b>Reset everything</b><p>Restores seeded users, enquiries, listings &amp; settings.</p></div>
+              <button class="btn btn--sm btn--ghost" type="button" id="resetDemo" style="color:var(--danger);border-color:rgba(255,107,129,.4)">Reset</button>
+            </div>
+            <div class="switch-row">
+              <div><b>Storage used</b><p id="storageUsed">—</p></div>
+              <span class="pill pill--info">localStorage</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg> Session</h2></div>
+            <div class="switch-row">
+              <div><b>Signed in as</b><p id="sessLine">—</p></div>
+              <span class="pill pill--ok">admin</span>
+            </div>
+            <div class="switch-row">
+              <div><b>Sign out</b><p>Ends this session on this browser.</p></div>
+              <button class="btn btn--sm btn--ghost" type="button" data-logout>Sign out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ============ APP FOOTER ============ -->
+<footer class="appfoot">
+  <div class="container">
+    <p>© <span data-year>2026</span> Stackly Realty · Admin Console · RERA TN/29/0000/2011</p>
+    <nav aria-label="Footer">
+      <a href="index.html">Main Site</a> ·
+      <a href="dashboard.html">User Dashboard</a> ·
+      <a href="contact.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

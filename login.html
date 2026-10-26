@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — Stackly | User &amp; Admin Login</title>
+<meta name="description" content="Sign in to Stackly. Role-based login for home seekers and administrators — save favourites, track enquiries and manage listings.">
+<meta name="theme-color" content="#0a192f">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L43 18v24a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V18L24 4z' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3Cpath d='M17 44V28h14v16' fill='none' stroke='%2364ffda' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader__inner">
+    <div class="loader__logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span>Stack<span style="color:#64ffda">ly</span></span>
+    </div>
+    <div class="loader__ring" aria-hidden="true"></div>
+    <p class="loader__text">Signing you in securely…</p>
+    <p class="loader__sub">One moment</p>
+  </div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Stackly — go to homepage">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span class="brand__full">Stack<b>ly</b></span>
+    </a>
+
+    <nav class="nav__menu" aria-label="Primary navigation">
+      <ul class="nav__links">
+        <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Properties
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="properties.html"><span class="dot"></span>All Properties</a></li>
+            <li><a href="properties.html?purpose=sale"><span class="dot"></span>Buy a Home</a></li>
+            <li><a href="properties.html?purpose=rent"><span class="dot"></span>Rent a Home</a></li>
+            <li><a href="properties.html?type=Commercial"><span class="dot"></span>Commercial Spaces</a></li>
+            <li><a href="properties.html?sort=new"><span class="dot"></span>New Launches</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+
+        <li class="nav__item nav__item--drop">
+          <button class="nav__link" type="button" aria-haspopup="true">Company
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="about.html"><span class="dot"></span>About Us</a></li>
+            <li><a href="index.html#story"><span class="dot"></span>Our Story</a></li>
+            <li><a href="index.html#services"><span class="dot"></span>Why Stackly</a></li>
+            <li><a href="index.html#agents"><span class="dot"></span>Our Advisors</a></li>
+            <li><a href="index.html#testimonials"><span class="dot"></span>Testimonials</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="contact.html#contact-form">List Your Property</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE OVERLAY ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__scroll">
+    <div class="m-item"><a href="index.html">Home</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Properties <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="properties.html">All Properties</a>
+        <a href="properties.html?purpose=sale">Buy a Home</a>
+        <a href="properties.html?purpose=rent">Rent a Home</a>
+        <a href="properties.html?type=Commercial">Commercial Spaces</a>
+        <a href="properties.html?sort=new">New Launches</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="about.html">About</a></div>
+
+    <div class="m-item m-item--drop">
+      <button type="button" aria-haspopup="true">Company <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="m-sub">
+        <a href="about.html">About Us</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#services">Why Stackly</a>
+        <a href="index.html#agents">Our Advisors</a>
+        <a href="index.html#testimonials">Testimonials</a>
+      </div>
+    </div>
+
+    <div class="m-item"><a href="contact.html">Contact</a></div>
+
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary btn--block" href="contact.html#contact-form">List Your Property</a>
+      <p class="m-contact">Talk to us: <a href="tel:+914440001234">+91 44 4000 1234</a><br><a href="mailto:hello@stackly.com">hello@stackly.com</a></p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.8v3h2.5v7h3.2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.2v.1M11.6 17v-3.7a2.4 2.4 0 0 1 4.8 0V17"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SIGN IN ============ -->
+<main class="auth">
+
+  <!-- Brand panel: pitch + demo credentials -->
+  <aside class="auth__aside">
+    <div class="auth__brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="398 82 212 290" width="36" height="36" aria-hidden="true" focusable="false"><path fill="#64ffda" d="M419.713867,256.179962 C408.001251,235.739304 410.215973,215.613876 419.889709,195.679504 C426.373138,182.319229 436.255493,171.444672 446.508270,160.904480 C457.075165,150.041229 468.783997,140.348602 478.792694,128.896606 C487.411407,119.035004 494.797852,108.464394 500.031921,96.425682 C500.738983,94.799370 501.001617,92.854477 502.785980,91.712807 C503.214905,91.838028 503.879059,91.821617 504.103485,92.127670 C514.526489,106.341171 522.003967,121.483376 518.287415,139.859406 C515.933533,151.498276 508.987885,160.308563 500.296600,167.942245 C487.788574,178.928223 473.634369,187.949692 462.046570,200.037262 C456.219025,206.116135 451.191589,212.659836 449.149933,221.054688 C445.376373,236.570572 454.272034,249.198563 470.197021,250.779221 C485.241028,252.272446 499.302216,248.880798 512.632202,241.996979 C514.021362,241.279602 515.213196,239.793518 517.062500,240.547546 C517.833252,242.063324 516.690857,242.794266 515.917847,243.562866 C502.480865,256.923462 487.519073,267.973206 468.591339,271.949402 C447.923096,276.291199 431.269562,272.383606 419.713867,256.179962 z"/><path fill="#64ffda" d="M536.351807,311.352905 C521.089722,325.623138 508.631836,341.451172 501.644409,361.304535 C500.580017,360.856842 499.799347,360.777496 499.458496,360.348633 C491.323975,350.113098 485.458466,338.909088 484.707672,325.531189 C484.034546,313.536499 489.236786,303.909576 496.947052,295.363251 C506.737030,284.511749 519.089050,276.702271 530.329102,267.573334 C539.676453,259.981689 548.930542,252.352356 553.649658,240.719803 C556.247925,234.315125 556.803040,227.722214 555.167542,221.122284 C551.964783,208.197189 539.399353,200.886032 526.174622,203.877502 C513.911682,206.651428 503.242737,212.702515 493.079834,219.823700 C492.039246,220.552856 491.267578,221.851700 489.661957,221.557190 C488.659760,220.289383 489.653076,219.345703 490.287292,218.480408 C503.850159,199.976334 521.506714,187.674316 544.321167,183.636948 C574.742554,178.253418 599.437622,199.883118 594.804749,234.346802 C592.539368,251.198425 583.628967,264.794067 572.581299,277.156372 C561.558105,289.491241 548.610413,299.803345 536.351807,311.352905 z"/></svg>
+      <span>Stack<b>ly</b></span>
+    </div>
+
+    <div class="auth__pitch">
+      <p class="eyebrow">Your account</p>
+      <h2>Everything you saved, <span class="serif">in one place.</span></h2>
+      <p>Sign in to shortlist homes, track every enquiry and get advisor callbacks — or switch to the admin console to run the marketplace.</p>
+      <ul class="auth__list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg> Save unlimited homes &amp; create alerts</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg> Track enquiries &amp; site visits live</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg> Admin console for listings, users &amp; reports</li>
+      </ul>
+    </div>
+
+    <div class="demo-creds">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg> Demo credentials — one tap to fill</h4>
+      <div class="demo-row">
+        <div><b>Administrator</b><code>admin@stackly.com · admin123</code></div>
+        <button class="btn btn--sm btn--blue" type="button" data-demo="admin">Use</button>
+      </div>
+      <div class="demo-row">
+        <div><b>Regular user</b><code>user@stackly.com · user123</code></div>
+        <button class="btn btn--sm btn--soft" type="button" data-demo="user">Use</button>
+      </div>
+      <p class="demo-reset">Still stuck? <button type="button" id="resetDemo">Reset demo data</button></p>
+    </div>
+  </aside>
+
+  <!-- Form panel -->
+  <div class="auth__main">
+    <div class="auth__box">
+      <p class="eyebrow">Welcome back</p>
+      <h1>Sign in to <span class="serif grad-text">Stackly</span></h1>
+      <p class="sub">Choose how you want to sign in — the dashboard you land on follows your role.</p>
+
+      <!-- Role tabs -->
+      <div class="rtabs" role="tablist" aria-label="Choose account role">
+        <button class="rtab is-active" type="button" role="tab" aria-selected="true" data-role="user">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+          User <small>Buy · Rent · Save</small>
+        </button>
+        <button class="rtab" type="button" role="tab" aria-selected="false" data-role="admin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          Admin <small>Manage · Approve</small>
+        </button>
+      </div>
+
+      <div class="form-alert" id="loginAlert" role="alert">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.01"/></svg>
+        <span></span>
+      </div>
+
+      <form class="auth-form" id="loginForm" novalidate style="margin-top:18px">
+        <div class="field">
+          <label for="liEmail">Email address <span class="req">*</span></label>
+          <input type="email" id="liEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <span class="field__err">Please enter a valid email address.</span>
+        </div>
+
+        <div class="field">
+          <label for="liPass">Password <span class="req">*</span></label>
+          <div class="pw-wrap">
+            <input type="password" id="liPass" name="password" placeholder="••••••••" autocomplete="current-password" required>
+            <button class="pw-toggle" type="button" aria-label="Show password">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field__err">Password is required.</span>
+        </div>
+
+        <div class="auth-form__row">
+          <label class="check"><input type="checkbox" name="remember" checked> Keep me signed in</label>
+          <a href="#" id="forgotLink">Forgot password?</a>
+        </div>
+
+        <button class="btn btn--primary btn--lg btn--block" type="submit" id="loginBtn">
+          Sign in
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <p class="auth__alt">New to Stackly? <a href="signup.html">Create a free account</a></p>
+      <p class="auth__alt" style="margin-top:10px;font-size:.8rem;color:var(--muted)">
+        Demo authentication — accounts are stored only in your browser (localStorage).
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
